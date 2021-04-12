@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>MyPlate Diet</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Your styles should be called here -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+    <div class='container'>
+      <h1>Are You Able to Adhere to the MyPlate Diet?</h1>
+      <p class='byline'>By Zachary Smith</p>
+    </div>
+    <div class='container image'>
+      <img src='images/food-header.jpg' />
+    </div>
+    <div class='container'>
+      <p>The benchmark for a nutritious meal as decided by the United States is MyPlate. Replacing the food pyramid in 2011, the U.S. Department of Agriculture's Center for Nutrition Policy and Promotion new nutrition guide is based on the
+        reccomedations of the Dietary Guidelines for Americans.</p>
+      <p>The breakdown of MyPlate is approximately 30 percent grains, 40 percent vegetables, 20 percent protein and 10 percent fruits, with a seperate smaller circle representing dairy. How much a person should eat of each food group is
+        determined by a number of factors including biological sex and age.</p>
+      <h4> So what is considered a part of each food group?</h4>
+      <p> Although it may seem like a silly question for some categories, it's important to know exactly what is counted in a serving for each food group.</p>
+      <div class="container">
+        <div class="calculator">
+          <div class="row">
+            <div class='item'>
+              <h4>Fruit</h4>
+              <ul>
+                <li> Whole Fruit </li>
+                <li> 100% Fruit Juice </li>
+                <li> Canned Fruit </li>
+                <li> Frozen Fruit </li>
+                <li> Dried Fruit </li>
+              </ul>
+              <p> Serving size: 1 cup of fruit or fruit juice, or 1/2 cup dried fruit.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='item'>
+              <h4>Vegetables</h4>
+              <ul>
+                <li> Whole Vegetables </li>
+                <li> Vegetable Juice </li>
+                <li> Canned Vegetables </li>
+                <li> Frozen Vegetables </li>
+                <li> Dried Vegetables </li>
+                <li> Dark or leafy greens </li>
+              </ul>
+              <p> Serving size: 1 cup of raw or cooked vegetables, 1 cup of vegetable juice, or 2 cups of greens.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='item'>
+              <h4>Animal Protein</h4>
+              <ul>
+                <li> Meat </li>
+                <li> Poultry </li>
+                <li> Seafood </li>
+                <li> Eggs </li>
+              </ul>
+              <p> Serving size: 1 oz of meat, poultry or fish, or 1 egg</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='item'>
+              <h4>Vegetable Protein</h4>
+              <ul>
+                <li> Beans, Peas, and Lentils </li>
+                <li> Nuts and Seeds </li>
+                <li> Nut butters and Hummus</li>
+                <li> Tofu, Tempeh, and other Soy products</li>
+              </ul>
+              <p> Serving size: 1/4 cup cooked beans, 1/2 oz of nuts and seeds, or 1 Tbs of peanut butter </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='item'>
+              <h4>Grains</h4>
+              <ul>
+                <li> Bread and Tortillas </li>
+                <li> Rice </li>
+                <li> Oats and Cereal </li>
+                <li> Pasta </li>
+              </ul>
+              <p> Serving size: 1 slice of bread, 1 cup of cereal, 1/2 cup of rice or pasta. At least half the grains you eat in a week should be whole grains.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class='item'>
+              <h4>Dairy</h4>
+              <ul>
+                <li> Milk </li>
+                <li> Yogurt </li>
+                <li> Cheese </li>
+                <li> Soy alternatives </li>
+              </ul>
+              <p> Serving size: 1 cup of milk or yogurt or 1.5 oz of natural cheese </p>
+            </div>
+          </div>     
+        </div>
+        <div class='calc-container'>
+          <div class="container">
+            <h2>Are you following the federal reccomended diet plan?</h2>
+            <p>Identify your weekly servings to see whether or not you are eating according to MyPlate.</p>
+            <select id="sex">
+              <option value="">Biological sex</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <select id="age">
+              <option value="">Age group</option>
+              <option value="age_1">19-30 yrs</option>
+              <option value="age_2">31-59 yrs</option>
+              <option value="age_3">60+ yrs</option>
+            </select>
+            <div class="calculator">
+              <div id="fruit" class="row" data-type="fruit">
+                <div class='item'>
+                  <h3>Fruit</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit"> cups </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+              <div id="vegetable" class="row" data-type="vegetable">
+                <div class='item'>
+                  <h3>Vegetables</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit">
+                      cups
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+              <div id="animal" class="row" data-type="protein">
+                <div class='item'>
+                  <h3>Animal Protein</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit">
+                      oz
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+              <div id="nuts" class="row" data-type="protein">
+                <div class='item'>
+                  <h3>Vegetable Protein</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit">
+                      oz
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+              <div id="grain" class="row" data-type="grain">
+                <div class='item'>
+                  <h3>Grain</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit">
+                      oz
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+              <div id="dairy" class="row" data-type="dairy">
+                <div class='item'>
+                  <h3>Dairy</h3>
+                  <img src="" />
+                  <div class="qty_container">
+                    <div>
+                      <input type="number" name='qty' min="0" value="0" step="0.5" />
+                    </div>
+                    <div class="unit">
+                      cups
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.calc-container -->
+        <!-- Your javascript should be called here -->
+        <script src="main.js"></script>
+  </body>
+
+</html>
