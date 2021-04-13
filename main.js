@@ -141,7 +141,7 @@ function item_input_listener(e) {
 			row.querySelector("p").innerHTML = `Good job! Your weekly goal for fruit is ${fruit_goal} cups`;
 		} else {
 			row.classList.add("fail");
-			row.querySelector("p").innerHTML = `There is room for improvement. You are ${(fruit_goal - qty)} cups short of your weekly fruit goal of ${fruit_goal} cups`;
+			row.querySelector("p").innerHTML = `There is room for improvement. <b>You are ${(fruit_goal - qty)} cups short of your weekly fruit goal of ${fruit_goal} cups</b>`;
 		}
 	}
 	if (row.dataset.type === "vegetable") {
@@ -150,7 +150,7 @@ function item_input_listener(e) {
 			row.querySelector("p").innerHTML = `Good job! Your weekly goal for vegetables is ${vegetable_goal} cups`;
 		} else {
 			row.classList.add("fail");
-			row.querySelector("p").innerHTML = `There is room for improvement. You are ${(vegetable_goal - qty)} cups short of your weekly vegetable goal of ${vegetable_goal} cups`;
+			row.querySelector("p").innerHTML = `There is room for improvement. <b>You are ${(vegetable_goal - qty)} cups short of your weekly vegetable goal of ${vegetable_goal} cups</b>`;
 		}
 	}
 	if (row.dataset.type === "grain") {
@@ -159,7 +159,7 @@ function item_input_listener(e) {
 			row.querySelector("p").innerHTML = `Good job! Your weekly goal for grains is ${grain_goal} ounces`;
 		} else {
 			row.classList.add("fail");
-			row.querySelector("p").innerHTML = `There is room for improvement. You are ${(grain_goal - qty)} cups short of your weekly grain goal of ${grain_goal} ounces`;
+			row.querySelector("p").innerHTML = `There is room for improvement. <b>You are ${(grain_goal - qty)} cups short of your weekly grain goal of ${grain_goal} ounces</b>`;
 		}
 	}
 	if (row.dataset.type === "dairy") {
@@ -168,7 +168,7 @@ function item_input_listener(e) {
 			row.querySelector("p").innerHTML = `Good job! Your weekly goal for grains is ${dairy_goal} cups`;
 		} else {
 			row.classList.add("fail");
-			row.querySelector("p").innerHTML = `There is room for improvement. You are ${(dairy_goal - qty)} cups short of your weekly dairy goal of ${dairy_goal} cups`;
+			row.querySelector("p").innerHTML = `There is room for improvement. <b> You are ${(dairy_goal - qty)} cups short of your weekly dairy goal of ${dairy_goal} cups</b>`;
 		}
 	}
 	if (row.dataset.type === "protein") {
@@ -195,11 +195,11 @@ function item_input_listener(e) {
 			} else {
 				row.classList.add("fail");
 				if (row.id === "animal") {
-					message = `There is room for improvement. You are ${(protein_goal - qty)} cups short of your weekly goal of ${protein_goal} cups. You can improve this with more animal protein, or with vegetable protein.`;
+					message = `There is room for improvement. <b> You are ${(protein_goal - qty)} cups short of your weekly goal of ${protein_goal} cups.</b> You can improve this with more animal protein, or with vegetable protein.`;
 				}
 
 				if (row.id === "nuts") {
-					message = `There is room for improvement. You are ${(protein_goal - qty)} cups short of your weekly goal of ${protein_goal} cups. You can improve this with more vegetable protein, or with animal protein.`;
+					message = `There is room for improvement. <b> You are ${(protein_goal - qty)} cups short of your weekly goal of ${protein_goal} cups.</b> You can improve this with more vegetable protein, or with animal protein.`;
 				}
 			}
 			row.querySelector("p").innerHTML = message;

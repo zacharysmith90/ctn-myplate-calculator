@@ -34,7 +34,12 @@ img {
     margin: 0 auto;
 }
 
-p {
+img.calc {
+    /* Sets image width to match parent */
+    width: 50%;
+}
+
+img p {
     line-height: 1.2em;
 }
 
@@ -67,12 +72,30 @@ figcaption {
     padding: 5px 10px;
 }
 
+select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.flex.filter div {
+    flex-basis: 50%;
+}
+
 /**
 * Calculator styles
 */
 .calc-container {
-    background-color: #f7f7f7;
-    /* Calc background is slightly gray and the full width of the page */
+    background-color: #EBFFe5;
+    /* Calc background is slightly green and the full width of the page */
     padding: 22px 0;
     /* 22px of vertical padding only */
 }
@@ -88,7 +111,7 @@ figcaption {
 }
 
 .qty_container>div {
-    flex-basis: 90%;
+    flex-basis: 85%;
     /* Allow the input field in the qty container to take up 90% of the width */
 }
 
@@ -104,33 +127,20 @@ figcaption {
 }
 
 /**
-* The unit space has a gray background and takes up the remaining 10% of space as an indicator
+* The unit space has a green background and takes up the remaining 10% of space as an indicator
 * to  the user how qty works
 */
 .qty_container .unit {
-    flex-basis: 10%;
-    background-color: #CCC;
+    flex-basis: 15%;
+    background-color: #77DD77;
     padding: 6px 0;
     text-align: center;
 }
 
 /**
-* The individual stores within each item are hidden by default.
-* We also apply margins to them to air them out
-*/
-.peapod,
-.freshdirect,
-.amazon {
-    margin: 5px 0;
-    display: none;
-}
-
-/**
 * On input, the JS toggles the active class on the row, which reveals the stores
 */
-.calculator .row.active .peapod,
-.calculator .row.active .freshdirect,
-.calculator .row.active .amazon {
+.calculator .row.active, {
     display: block;
 }
 
@@ -147,43 +157,6 @@ figcaption {
 .calculator .row {
     margin-bottom: 15px;
     flex-basis: 30%;
-}
-
-/**
-* Hide the totals by default until there's been input
-* Give the totals row a slightly different background and 100% flex-basis
-*/
-.calculator .row.total {
-    display: none;
-    background-color: #ccc;
-    padding: 10px;
-    flex-basis: 100%;
-}
-
-/**
-* Reveal the total row when it becomes active
-*/
-.calculator .row.total.active {
-    display: block;
-}
-
-/**
-* The JS will toggle the cheapest class on the lowest total
-* These styles make it stand out
-*/
-.cheapest {
-    font-weight: bold;
-    color: rgba(24, 100, 24, 1);
-    font-size: 1.3em;
-}
-
-/**
-* The cheapest class uses font awesome to add a check mark
-*/
-.cheapest::after {
-    font-family: FontAwesome;
-    content: '\f00c';
-    margin-left: 5px;
 }
 
 /*********************************************************************
@@ -221,6 +194,16 @@ figcaption {
     Note these styles will be applied to anything 769px or larger -- so desktop */
     .container {
         padding: 0;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .flex.filter div {
+        flex-basis: 49%;
     }
 }
 

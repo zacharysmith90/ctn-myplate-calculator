@@ -26,11 +26,14 @@
   <body>
     <!-- YOUR CONTENT GOES HERE -->
     <div class='container'>
-      <h1>Are You Able to Adhere to the MyPlate Diet?</h1>
+      <h2>Does Your Diet Comply with the MyPlate Nutrition Guide?</h2>
       <p class='byline'>By Zachary Smith</p>
     </div>
     <div class='container image'>
       <img src='images/food-header.jpg' />
+    </div>
+    <div class='container'>
+      <p class='caption'>Photo by Lily Banse <a href="https://unsplash.com/@lvnatikk">@lvnatikk</a></p>
     </div>
     <div class='container'>
       <p>The benchmark for a nutritious meal as decided by the United States is MyPlate. Replacing the food pyramid in 2011, the U.S. Department of Agriculture's Center for Nutrition Policy and Promotion new nutrition guide is based on the
@@ -117,116 +120,127 @@
             </div>
           </div>     
         </div>
-        <div class='calc-container'>
-          <div class="container">
-            <h2>Are you following the federal reccomended diet plan?</h2>
-            <p>Identify your weekly servings to see whether or not you are eating according to MyPlate.</p>
+      </div>
+    </div>
+    <div class='calc-container'>
+      <div class="container">
+        <h2>Are you following the MyPlate nutrition guideline?</h2>
+
+        <p>First identify your biological sex and your age group, then fill in your weekly servings of each food group accoring to the table above. You will find out where you are doing well in your diet, and in which areas you could improve. </p>
+
+        <div class="flex filter">
+          <div>
             <select id="sex">
               <option value="">Biological sex</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
+          </div>
+          <div>
             <select id="age">
               <option value="">Age group</option>
               <option value="age_1">19-30 yrs</option>
               <option value="age_2">31-59 yrs</option>
               <option value="age_3">60+ yrs</option>
             </select>
-            <div class="calculator">
-              <div id="fruit" class="row" data-type="fruit">
-                <div class='item'>
-                  <h3>Fruit</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit"> cups </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-              <div id="vegetable" class="row" data-type="vegetable">
-                <div class='item'>
-                  <h3>Vegetables</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit">
-                      cups
-                    </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-              <div id="animal" class="row" data-type="protein">
-                <div class='item'>
-                  <h3>Animal Protein</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit">
-                      oz
-                    </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-              <div id="nuts" class="row" data-type="protein">
-                <div class='item'>
-                  <h3>Vegetable Protein</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit">
-                      oz
-                    </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-              <div id="grain" class="row" data-type="grain">
-                <div class='item'>
-                  <h3>Grain</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit">
-                      oz
-                    </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-              <div id="dairy" class="row" data-type="dairy">
-                <div class='item'>
-                  <h3>Dairy</h3>
-                  <img src="" />
-                  <div class="qty_container">
-                    <div>
-                      <input type="number" name='qty' min="0" value="0" step="0.5" />
-                    </div>
-                    <div class="unit">
-                      cups
-                    </div>
-                  </div>
-                  <p></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <!-- /.calc-container -->
-        <!-- Your javascript should be called here -->
-        <script src="main.js"></script>
+        <div class="calculator">
+          <div id="fruit" class="row" data-type="fruit">
+            <div class='item'>
+              <h3>Fruit</h3>
+              <img class="calc" src="images/fruits.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit"> cups </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div id="vegetable" class="row" data-type="vegetable">
+            <div class='item'>
+              <h3>Vegetables</h3>
+              <img class="calc" src="images/vegetables.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit">
+                  cups
+                </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div id="animal" class="row" data-type="protein">
+            <div class='item'>
+              <h3>Animal Protein</h3>
+              <img class="calc" src="images/meat.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit">
+                  oz
+                </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div id="nuts" class="row" data-type="protein">
+            <div class='item'>
+              <h3>Vegetable Protein</h3>
+              <img class="calc" src="images/nuts.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit">
+                  oz
+                </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div id="grain" class="row" data-type="grain">
+            <div class='item'>
+              <h3>Grain</h3>
+              <img class="calc" src="images/bread.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit">
+                  oz
+                </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div id="dairy" class="row" data-type="dairy">
+            <div class='item'>
+              <h3>Dairy</h3>
+              <img class="calc" src="images/milk.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name='qty' min="0" value="0" step="0.5" />
+                </div>
+                <div class="unit">
+                  cups
+                </div>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <p class='caption'>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></a></p>
+        </div>
+      </div>
+    </div>
+    <!-- /.calc-container -->
+    <!-- Your javascript should be called here -->
+    <script src="main.js"></script>
   </body>
 
 </html>
